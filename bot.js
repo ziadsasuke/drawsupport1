@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
-const prefix = '_'
+const prefix = '/'
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -95,12 +95,12 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
+  .addField("Done" , " You can Check in Private")
   message.channel.sendEmbed(embed);
     }
 });
 client.on('message', message => {
-    var prefix = "_"
+    var prefix = "/"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
